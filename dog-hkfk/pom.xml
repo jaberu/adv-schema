@@ -100,7 +100,7 @@
                         <phase>process-sources</phase>
                         <configuration>
                             <target>
-                                <delete dir="${basedir}/target/generated-sources/xjc/net/opengis/iso19112"/>
+                                <delete dir="${basedir}/target/generated-sources/xjc/net"/>
                             </target>
                         </configuration>
                         <goals>
