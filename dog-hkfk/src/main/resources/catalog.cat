@@ -1,0 +1,7 @@
+
+REWRITE_SYSTEM "http://www.w3.org" "maven:org.hisrc.w3c:w3c-schemas:jar::!/w3c"
+REWRITE_SYSTEM "http://www.opengis.net/iso19112/iso19112.xsd" "maven:de.giseo.geoportal.core.ext:iso19112:jar::!/xsd/iso19112.xsd"
+REWRITE_SYSTEM "http://isk.geobasis-bb.de/ows/dog_lgb200_bebb_v3/appschemas" "xsd"
+REWRITE_SYSTEM "http://isk.geobasis-bb.de/ows/dog_lgb200_bebb_v3?SERVICE=WFS&VERSION=1.1.0&REQUEST=DescribeFeatureType&OUTPUTFORMAT=text%2Fxml%3B+subtype%3Dgml%2F3.1.1&TYPENAME=dog:Gemarkung&NAMESPACE=xmlns(dog=http%3A%2F%2Fwww.adv-online.de%2Fnamespaces%2Fadv%2Fdog)" "xsd/dog_lgb200_bebb_v3.xml"
+PUBLIC "http://www.isotc211.org/2005/gmd" "http://schemas.opengis.net/iso/19139/20070417/gmd/gmd.xsd"
+REWRITE_SYSTEM "http://schemas.opengis.net" "maven:org.jvnet.ogc:ogc-schemas:jar::!/ogc"

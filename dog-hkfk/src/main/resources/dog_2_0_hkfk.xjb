@@ -1,0 +1,29 @@
+<jaxb:bindings version="1.0" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+	xmlns:inheritance="http://jaxb2-commons.dev.java.net/basic/inheritance"
+	jaxb:extensionBindingPrefixes="inheritance">
+
+	<jaxb:bindings
+		schemaLocation="http://isk.geobasis-bb.de/ows/dog_lgb200_bebb_v3/appschemas/dog_2_0_hkfk.xsd"
+		node="/xs:schema">
+
+		<jaxb:bindings node="xs:complexType[@name='GemeindenType']/xs:complexContent/xs:extension/xs:sequence/xs:element[@name='name']">
+			<jaxb:property generateElementProperty="true"/>
+		</jaxb:bindings>
+		<jaxb:bindings node="xs:complexType[@name='KreiseType']/xs:complexContent/xs:extension/xs:sequence/xs:element[@name='name']">
+			<jaxb:property generateElementProperty="true"/>
+		</jaxb:bindings>
+		<jaxb:bindings node="xs:complexType[@name='OrtsteileType']/xs:complexContent/xs:extension/xs:sequence/xs:element[@name='name']">
+			<jaxb:property generateElementProperty="true"/>
+		</jaxb:bindings>
+		<jaxb:bindings node="xs:complexType[@name='StrassenType']/xs:complexContent/xs:extension/xs:sequence/xs:element[@name='name']">
+			<jaxb:property generateElementProperty="true"/>
+		</jaxb:bindings>
+		<jaxb:bindings node="xs:complexType[@name='StrassenType']/xs:complexContent/xs:extension/xs:sequence/xs:element[@name='parent']">
+			<jaxb:property generateElementProperty="false"/>
+		</jaxb:bindings>
+
+	</jaxb:bindings>
+
+</jaxb:bindings>

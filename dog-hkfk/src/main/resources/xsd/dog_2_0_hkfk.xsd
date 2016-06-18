@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:app="http://www.deegree.org/app" xmlns:deegreewfs="http://www.deegree.org/wfs" xmlns:dog="http://www.adv-online.de/namespaces/adv/dog" xmlns:gml="http://www.opengis.net/gml" xmlns:iso19112="http://www.opengis.net/iso19112" xmlns:ogc="http://www.opengis.net/ogc" xmlns:wfs="http://www.deegree.org/wfs" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.adv-online.de/namespaces/adv/dog">
+	<xsd:annotation>
+		<xsd:documentation>Dieses Schema baut auf dem DOG-Profil für Hauskoordinaten Deutschland in der Version 1.0.1 auf.</xsd:documentation>
+	</xsd:annotation>
+	<xsd:import namespace="http://www.opengis.net/iso19112" schemaLocation="http://www.opengis.net/iso19112/iso19112.xsd"/>
+	<!-- ======================================================================= -->
+	<xsd:element name="Hauskoordinaten" substitutionGroup="iso19112:SI_LocationInstance" type="dog:HauskoordinatenType"/>
+	<!-- ======================================================================= -->
+	<xsd:complexType name="HauskoordinatenType">
+		<xsd:complexContent>
+			<xsd:extension base="iso19112:SI_LocationInstanceType">
+				<xsd:sequence>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="qualitaet" type="xsd:string"/>
+					<!-- "datensatznummer" in Schema-PDF falsch, muss durch DE_... string sein -->
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="datensatznummer" type="xsd:string"/> 
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="land" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="regierungsbezirk" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="kreis" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="gemeinde" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="ortsteil" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="strasse" type="xsd:string"/>
+			<!--	<xsd:element maxOccurs="unbounded" minOccurs="0" name="hausnummer" type="xsd:string"/>						
+					Hausnummer wird abweichend vom Schema in LGB als int ausgegeben. Auch anderes Mapping in der DB -->
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="hausnummer" type="xsd:integer"/>		
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="hausnummernzusatz" type="xsd:string"/>						
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="hausschluessel" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="strassenname" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="strassenname_normalisiert" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="strassenname_soundex" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="ortsteilname" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="ortsteilname_normalisiert" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="postleitzahl" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="postOrtsteil" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="postOrtsteil_normalisiert" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="ortsnamePost" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="ortsnamePost_normalisiert" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="zusatzOrtsname" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="zusatzOrtsname_normalisiert" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:element name="Strassen" substitutionGroup="iso19112:SI_LocationInstance" type="dog:StrassenType"/>
+	<!-- ======================================================================= -->
+	<xsd:complexType name="StrassenType">
+		<xsd:complexContent>
+			<xsd:extension base="iso19112:SI_LocationInstanceType">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="0"  name="parent" type="iso19112:SI_LocationInstancePropertyType"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="land" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="strassenschluessel" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="strassenname" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="strassenname_normalisiert" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="strassenname_soundex" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="ortsteilname" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="ortsteilname_normalisiert" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="gemeindename_normalisiert" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="postleitzahl" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="postOrtsteil" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="postOrtsteil_normalisiert" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="ortsnamePost" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="ortsnamePost_normalisiert" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="zusatzOrtsname" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="zusatzOrtsname_normalisiert" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="name" type="gml:CodeType"/> <!-- zusaetzlich von LGB eingefuegt -->
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:element name="Ortsteile" substitutionGroup="iso19112:SI_LocationInstance" type="dog:OrtsteileType"/>
+	<!-- ======================================================================= -->
+	<xsd:complexType name="OrtsteileType">
+		<xsd:complexContent>
+			<xsd:extension base="iso19112:SI_LocationInstanceType">
+				<xsd:sequence>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="land" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="regierungsbezirk" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="kreis" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="gemeinde" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="ortsteil" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="ortsteilschluessel" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="ortsteilname" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="ortsteilname_normalisiert" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="gemeindename_normalisiert" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="plz" type="xsd:string"/>   <!-- PLZ zusaetzlich von LGB eingefuegt -->
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="name" type="gml:CodeType"/>  
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:element name="Postleitzahlgebiete" substitutionGroup="iso19112:SI_LocationInstance" type="dog:PostleitzahlgebieteType"/>
+		<!-- ======================================================================= -->
+	<xsd:complexType name="PostleitzahlgebieteType">
+		<xsd:complexContent>
+			<xsd:extension base="iso19112:SI_LocationInstanceType">
+				<xsd:sequence>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="postOrt" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="postOrt_normalisiert" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="postOrtsteile" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="postOrtsteile_normalisiert" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="ortsnamePost" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="ortsnamePost_normalisiert" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="zusatzOrtsname" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="zusatzOrtsname_normalisiert" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:element name="Gemeinden" substitutionGroup="iso19112:SI_LocationInstance" type="dog:GemeindenType"/>
+	<!-- ======================================================================= -->
+	<xsd:complexType name="GemeindenType">
+		<xsd:complexContent>
+			<xsd:extension base="iso19112:SI_LocationInstanceType">
+				<xsd:sequence>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="parent_amt" type="xsd:string" />   <!-- zusaetzlich von LGB eingefuegt -->
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="land" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="regierungsbezirk" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="kreis" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="gemeinde" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="gemeindeschluessel" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="gemeindename_normalisiert" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="kreisname_normalisiert" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="bundeslandname" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="bundeslandname_normalisiert" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="name" type="gml:CodeType"/>  <!-- zusaetzlich von LGB eingefuegt -->
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:element name="Kreise" substitutionGroup="iso19112:SI_LocationInstance" type="dog:KreiseType"/>
+	<!-- ======================================================================= -->
+	<xsd:complexType name="KreiseType">
+		<xsd:complexContent>
+			<xsd:extension base="iso19112:SI_LocationInstanceType">
+				<xsd:sequence>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="land" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="regierungsbezirk" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="kreis" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="kreisschluessel" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="kreisname_normalisiert" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="regierungsbezirksname_normalisiert" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="bundeslandname" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="bundeslandname_normalisiert" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="name" type="gml:CodeType"/>  <!-- zusaetzlich von LGB eingefuegt -->						
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:element name="Regierungsbezirke" substitutionGroup="iso19112:SI_LocationInstance" type="dog:RegierungsbezirkeType"/>
+	<!-- ======================================================================= -->
+	<xsd:complexType name="RegierungsbezirkeType">
+		<xsd:complexContent>
+			<xsd:extension base="iso19112:SI_LocationInstanceType">
+				<xsd:sequence>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="land" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="regierungsbezirk" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="regierungsbezirksschluessel" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="regierungsbezirksname_normalisiert" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="bundeslandname" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="bundeslandname_normalisiert" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:element name="Bundeslaender" substitutionGroup="iso19112:SI_LocationInstance" type="dog:BundeslaenderType"/>
+	<!-- ======================================================================= -->
+	<xsd:complexType name="BundeslaenderType">
+		<xsd:complexContent>
+			<xsd:extension base="iso19112:SI_LocationInstanceType">
+				<xsd:sequence>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="land" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="bundeslandname_normalisiert" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:element name="Flurstueckskoordinaten" substitutionGroup="iso19112:SI_LocationInstance" type="dog:FlurstueckskoordinatenType"/>
+	<!-- ======================================================================= -->
+	<xsd:complexType name="FlurstueckskoordinatenType">
+		<xsd:complexContent>
+			<xsd:extension base="iso19112:SI_LocationInstanceType">
+				<xsd:sequence>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="land" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="gemarkung" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="flur" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="flurstuecksnummer" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="flurstuecksnummernenner" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="folgenummer" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="flurstuecksflaeche" type="xsd:integer"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="status" type="xsd:integer"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="regierungsbezirk" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="kreis" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="gemeinde" type="xsd:string" />
+					<xsd:element maxOccurs="1" minOccurs="0" name="verwaltungsart" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="gemeindename" type="xsd:string" />
+					<xsd:element maxOccurs="1" minOccurs="0" name="kreisname" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:element name="Flur" substitutionGroup="iso19112:SI_LocationInstance" type="dog:FlurType"/>
+	<!-- ======================================================================= -->
+	<xsd:complexType name="FlurType">
+		<xsd:complexContent>
+			<xsd:extension base="iso19112:SI_LocationInstanceType">
+				<xsd:sequence>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="land" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="gemarkung" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="flur" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:element name="Gemarkung" substitutionGroup="iso19112:SI_LocationInstance" type="dog:GemarkungType"/>
+	<!-- ======================================================================= -->
+	<xsd:complexType name="GemarkungType">
+		<xsd:complexContent>
+			<xsd:extension base="iso19112:SI_LocationInstanceType">
+				<xsd:sequence>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="land" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="gemarkung" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="gemarkungsschluessel" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="gemarkungsname" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="gemarkungsname_normalisiert" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ======================================================================= -->
+	<xsd:element name="Aemter" substitutionGroup="iso19112:SI_LocationInstance" type="dog:AemterType"/>
+	<!-- ======================================================================= -->
+    <xsd:complexType name="AemterType">
+ 		<xsd:complexContent>
+ 			 <xsd:extension base="iso19112:SI_LocationInstanceType">
+				  <xsd:sequence>
+					   <xsd:element maxOccurs="unbounded" minOccurs="0" name="land" type="xsd:string"/>
+					   <xsd:element maxOccurs="unbounded" minOccurs="0" name="regierungsbezirk" type="xsd:string"/>
+					   <xsd:element maxOccurs="unbounded" minOccurs="0" name="kreis" type="xsd:string"/>
+					   <xsd:element maxOccurs="unbounded" minOccurs="0" name="amtname_normalisiert" type="xsd:string"/>
+					   <xsd:element maxOccurs="unbounded" minOccurs="0" name="amtname_soundex" type="xsd:string"/>
+				  </xsd:sequence>
+			 </xsd:extension>
+	 	</xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,26 @@
+<jaxb:bindings version="1.0" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+	xmlns:inheritance="http://jaxb2-commons.dev.java.net/basic/inheritance"
+	jaxb:extensionBindingPrefixes="inheritance">
+
+	<jaxb:bindings
+		schemaLocation="http://repository.gdi-de.org/schemas/adv/dog/iso19112.xsd"
+		node="/xs:schema">
+		<jaxb:schemaBindings>
+			<jaxb:package name="net.opengis.iso19112"/>
+		</jaxb:schemaBindings>
+
+		<!-- conflicts with name property of net.opengis.gml.v_3_1_1.AbstractGMLType  -->
+		<jaxb:bindings node="xs:complexType[@name='SI_GazetteerType']/xs:complexContent/xs:extension/xs:sequence/xs:element[@name='name']">
+			<jaxb:property name="gazetteerName"/>
+		</jaxb:bindings>
+
+		<!-- conflicts with name property of net.opengis.gml.v_3_1_1.AbstractGMLType  -->
+		<jaxb:bindings node="xs:complexType[@name='SI_LocationTypeType']/xs:complexContent/xs:extension/xs:sequence/xs:element[@name='name']">
+			<jaxb:property name="locationName"/>
+		</jaxb:bindings>
+
+	</jaxb:bindings>
+
+</jaxb:bindings>

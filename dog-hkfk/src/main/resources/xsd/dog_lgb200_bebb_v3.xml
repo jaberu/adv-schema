@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.adv-online.de/namespaces/adv/dog">
+  <include schemaLocation="http://isk.geobasis-bb.de/ows/dog_lgb200_bebb_v3/appschemas/dog_2_0_hkfk.xsd"/>
+  <import namespace="http://www.opengis.net/iso19112" schemaLocation="http://www.opengis.net/iso19112/iso19112.xsd"/>
+  <import namespace="http://www.w3.org/2001/SMIL20/" schemaLocation="http://schemas.opengis.net/gml/3.1.1/smil/smil20.xsd"/>
+  <import namespace="http://www.w3.org/2001/SMIL20/Language" schemaLocation="http://schemas.opengis.net/gml/3.1.1/smil/smil20-language.xsd"/>
+  <import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="http://schemas.opengis.net/iso/19139/20070417/gmd/gmd.xsd"/>
+</schema>

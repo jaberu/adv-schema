@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?><wfs:FeatureCollection xmlns:wfs="http://www.opengis.net/wfs" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:iso19112="http://www.opengis.net/iso19112" xmlns:gml="http://www.opengis.net/gml" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:dog="http://www.lverma.nrw.de/namespaces/dog" xmlns:app="http://www.deegree.org/app" numberOfFeatures="15">
+    <gml:featureMember>
+        <dog:Flur gml:id="'BB_FLR_14019">
+            <iso19112:geographicIdentifier>124847001</iso19112:geographicIdentifier>
+            <iso19112:gazetteer>
+                <iso19112:SI_Gazetteer gml:id="BB_SIGAZ_12">
+                    <iso19112:name>
+                        <gmd:RS_Identifier>
+                            <gmd:code>
+                                <gco:CharacterString>Hauskoordinaten-Gazetteer BB</gco:CharacterString>
+                            </gmd:code>
+                        </gmd:RS_Identifier>
+                    </iso19112:name>
+                    <iso19112:scope>Hauskoordinaten Brandenburg</iso19112:scope>
+                    <iso19112:custodian>
+                        <gmd:CI_ResponsibleParty id="BB_CIRP_12">
+                            <gmd:organisationName>
+                                <gco:CharacterString>Landesvermessung und Geobasisinformation Brandenburg</gco:CharacterString>
+                            </gmd:organisationName>
+                            <gmd:role>
+                                <gmd:CI_RoleCode codeList="http://eden.ign.fr/xsd/isotc211/20070227/resources/Codelist/gmxCodelists.xml" codeListValue="custodian"/>
+                            </gmd:role>
+                        </gmd:CI_ResponsibleParty>
+                    </iso19112:custodian>
+                    <iso19112:territoryOfUse>
+                        <gmd:EX_GeographicBoundingBox id="BB_SIGEX_12">
+                            <gmd:westBoundLongitude>
+                                <gco:Decimal>10.6653</gco:Decimal>
+                            </gmd:westBoundLongitude>
+                            <gmd:eastBoundLongitude>
+                                <gco:Decimal>15.3313</gco:Decimal>
+                            </gmd:eastBoundLongitude>
+                            <gmd:southBoundLatitude>
+                                <gco:Decimal>51.1987</gco:Decimal>
+                            </gmd:southBoundLatitude>
+                            <gmd:northBoundLatitude>
+                                <gco:Decimal>53.5985</gco:Decimal>
+                            </gmd:northBoundLatitude>
+                        </gmd:EX_GeographicBoundingBox>
+                    </iso19112:territoryOfUse>
+                    <iso19112:featureType>
+                        <iso19112:SI_LocationType gml:id="BB_SILC_1">
+                            <iso19112:name>
+                                <gmd:RS_Identifier>
+                                    <gmd:code>
+                                        <gco:CharacterString>SI_Gazetteer</gco:CharacterString>
+                                    </gmd:code>
+                                </gmd:RS_Identifier>
+                            </iso19112:name>
+                            <iso19112:identifier>name</iso19112:identifier>
+                            <iso19112:theme>Administrative Boundary Features</iso19112:theme>
+                            <iso19112:definition>Haus- und FlurstÃ¼ckskoordinaten-Gazetteer Brandenburg</iso19112:definition>
+                            <iso19112:territoryOfUse xlink:href="#BB_SIGEX_12"/>
+                            <iso19112:owner xlink:href="#BB_CIRP_12"/>
+                        </iso19112:SI_LocationType>
+                        <iso19112:SI_LocationType gml:id="BB_SILC_2">
+                            <iso19112:name>
+                                <gmd:RS_Identifier>
+                                    <gmd:code>
+                                        <gco:CharacterString>Hauskoordinaten</gco:CharacterString>
+                                    </gmd:code>
+                                </gmd:RS_Identifier>
+                            </iso19112:name>
+                            <iso19112:identifier>name</iso19112:identifier>
+                            <iso19112:theme>Administrative Boundary Features</iso19112:theme>
+                            <iso19112:definition>Hauskoordinaten Deutschland der AdV</iso19112:definition>
+                            <iso19112:territoryOfUse xlink:href="#BB_SIGEX_12"/>
+                            <iso19112:owner xlink:href="#BB_CIRP_12"/>
+                        </iso19112:SI_LocationType>
+                        <iso19112:SI_LocationType gml:id="BB_SILC_3">
+                            <iso19112:name>
+                                <gmd:RS_Identifier>
+                                    <gmd:code>
+                                        <gco:CharacterString>Strassen</gco:CharacterString>
+                                    </gmd:code>
+                                </gmd:RS_Identifier>
+                            </iso19112:name>
+                            <iso19112:identifier>name</iso19112:identifier>
+                            <iso19112:theme>Administrative Boundary Features</iso19112:theme>
+                            <iso19112:definition>Strassen aus dem AdV - Hauskoordinatenbestand Deutschland abgeleitet</iso19112:definition>
+                            <iso19112:territoryOfUse xlink:href="#BB_SIGEX_12"/>
+                            <iso19112:owner xlink:href="#BB_CIRP_12"/>
+                        </iso19112:SI_LocationType>
+                        <iso19112:SI_LocationType gml:id="BB_SILC_4">
+                            <iso19112:name>
+                                <gmd:RS_Identifier>
+                                    <gmd:code>
+                                        <gco:CharacterString>Postleitzahlgebiete</gco:CharacterString>
+                                    </gmd:code>
+                                </gmd:RS_Identifier>
+                            </iso19112:name>
+                            <iso19112:identifier>code</iso19112:identifier>
+                            <iso19112:theme>Administrative Boundary Features</iso19112:theme>
+                            <iso19112:definition>Postleitzahlgebiete aus dem AdV - Hauskoordinatenbestand Deutschland abgeleitet</iso19112:definition>
+                            <iso19112:territoryOfUse xlink:href="#BB_SIGEX_12"/>
+                            <iso19112:owner xlink:href="#BB_CIRP_12"/>
+                        </iso19112:SI_LocationType>
+                        <iso19112:SI_LocationType gml:id="BB_SILC_5">
+                            <iso19112:name>
+                                <gmd:RS_Identifier>
+                                    <gmd:code>
+                                        <gco:CharacterString>Ortsteile</gco:CharacterString>
+                                    </gmd:code>
+                                </gmd:RS_Identifier>
+                            </iso19112:name>
+                            <iso19112:identifier>name</iso19112:identifier>
+                            <iso19112:theme>Administrative Boundary Features</iso19112:theme>
+                            <iso19112:definition>Ortsteile aus dem AdV - Hauskoordinatenbestand Deutschland abgeleitet</iso19112:definition>
+                            <iso19112:territoryOfUse xlink:href="#BB_SIGEX_12"/>
+                            <iso19112:owner xlink:href="#BB_CIRP_12"/>
+                        </iso19112:SI_LocationType>
+                        <iso19112:SI_LocationType gml:id="BB_SILC_6">
+                            <iso19112:name>
+                                <gmd:RS_Identifier>
+                                    <gmd:code>
+                                        <gco:CharacterString>Gemeinden</gco:CharacterString>
+                                    </gmd:code>
+                                </gmd:RS_Identifier>
+                            </iso19112:name>
+                            <iso19112:identifier>name</iso19112:identifier>
+                            <iso19112:theme>Administrative Boundary Features</iso19112:theme>
+                            <iso19112:definition>Gemeinden aus dem AdV - Hauskoordinatenbestand Deutschland abgeleitet</iso19112:definition>
+                            <iso19112:territoryOfUse xlink:href="#BB_SIGEX_12"/>
+                            <iso19112:owner xlink:href="#BB_CIRP_12"/>
+                        </iso19112:SI_LocationType>
+                        <iso19112:SI_LocationType gml:id="BB_SILC_7">
+                            <iso19112:name>
+                                <gmd:RS_Identifier>
+                                    <gmd:code>
+                                        <gco:CharacterString>Kreise</gco:CharacterString>
+                                    </gmd:code>
+                                </gmd:RS_Identifier>
+                            </iso19112:name>
+                            <iso19112:identifier>name</iso19112:identifier>
+                            <iso19112:theme>Administrative Boundary Features</iso19112:theme>
+                            <iso19112:definition>Kreise aus dem AdV - Hauskoordinatenbestand Deutschland abgeleitet</iso19112:definition>
+                            <iso19112:territoryOfUse xlink:href="#BB_SIGEX_12"/>
+                            <iso19112:owner xlink:href="#BB_CIRP_12"/>
+                        </iso19112:SI_LocationType>
+                        <iso19112:SI_LocationType gml:id="BB_SILC_8">
+                            <iso19112:name>
+                                <gmd:RS_Identifier>
+                                    <gmd:code>
+                                        <gco:CharacterString>Regierungsbezirke</gco:CharacterString>
+                                    </gmd:code>
+                                </gmd:RS_Identifier>
+                            </iso19112:name>
+                            <iso19112:identifier>name</iso19112:identifier>
+                            <iso19112:theme>Administrative Boundary Features</iso19112:theme>
+                            <iso19112:definition>Regierungsbezirke aus dem AdV - Hauskoordinatenbestand Deutschland abgeleitet</iso19112:definition>
+                            <iso19112:territoryOfUse xlink:href="#BB_SIGEX_12"/>
+                            <iso19112:owner xlink:href="#BB_CIRP_12"/>
+                        </iso19112:SI_LocationType>
+                        <iso19112:SI_LocationType gml:id="BB_SILC_9">
+                            <iso19112:name>
+                                <gmd:RS_Identifier>
+                                    <gmd:code>
+                                        <gco:CharacterString>Bundeslaender</gco:CharacterString>
+                                    </gmd:code>
+                                </gmd:RS_Identifier>
+                            </iso19112:name>
+                            <iso19112:identifier>name</iso19112:identifier>
+                            <iso19112:theme>Administrative Boundary Features</iso19112:theme>
+                            <iso19112:definition>Bundeslaender aus dem AdV - Hauskoordinatenbestand Deutschland abgeleitet</iso19112:definition>
+                            <iso19112:territoryOfUse xlink:href="#BB_SIGEX_12"/>
+                            <iso19112:owner xlink:href="#BB_CIRP_12"/>
+                        </iso19112:SI_LocationType>
+                        <iso19112:SI_LocationType gml:id="BB_SILC_10">
+                            <iso19112:name>
+                                <gmd:RS_Identifier>
+                                    <gmd:code>
+                                        <gco:CharacterString>Flurstueckskoordinaten</gco:CharacterString>
+                                    </gmd:code>
+                                </gmd:RS_Identifier>
+                            </iso19112:name>
+                            <iso19112:identifier>code</iso19112:identifier>
+                            <iso19112:theme>Administrative Boundary Features</iso19112:theme>
+                            <iso19112:definition>Flurstueckskoordinaten - ALKIS abgeleitet</iso19112:definition>
+                            <iso19112:territoryOfUse xlink:href="#BB_SIGEX_12"/>
+                            <iso19112:owner xlink:href="#BB_CIRP_12"/>
+                        </iso19112:SI_LocationType>
+                        <iso19112:SI_LocationType gml:id="BB_SILC_11">
+                            <iso19112:name>
+                                <gmd:RS_Identifier>
+                                    <gmd:code>
+                                        <gco:CharacterString>Flur</gco:CharacterString>
+                                    </gmd:code>
+                                </gmd:RS_Identifier>
+                            </iso19112:name>
+                            <iso19112:identifier>code</iso19112:identifier>
+                            <iso19112:theme>Administrative Boundary Features</iso19112:theme>
+                            <iso19112:definition>Flur - ALKIS abgeleitet</iso19112:definition>
+                            <iso19112:territoryOfUse xlink:href="#BB_SIGEX_12"/>
+                            <iso19112:owner xlink:href="#BB_CIRP_12"/>
+                        </iso19112:SI_LocationType>
+                        <iso19112:SI_LocationType gml:id="BB_SILC_12">
+                            <iso19112:name>
+                                <gmd:RS_Identifier>
+                                    <gmd:code>
+                                        <gco:CharacterString>Gemarkung</gco:CharacterString>
+                                    </gmd:code>
+                                </gmd:RS_Identifier>
+                            </iso19112:name>
+                            <iso19112:identifier>code</iso19112:identifier>
+                            <iso19112:theme>Administrative Boundary Features</iso19112:theme>
+                            <iso19112:definition>Gemarkung - ALKIS abgeleitet</iso19112:definition>
+                            <iso19112:territoryOfUse xlink:href="#BB_SIGEX_12"/>
+                            <iso19112:owner xlink:href="#BB_CIRP_12"/>
+                        </iso19112:SI_LocationType>
+                    </iso19112:featureType>
+                </iso19112:SI_Gazetteer>
+            </iso19112:gazetteer>
+            <iso19112:locationType xlink:href="#BB_SILC_11"/>
+            <dog:flur>001</dog:flur>
+        </dog:Flur>
+    </gml:featureMember>
+    <gml:featureMember>
+        <dog:Flur gml:id="'BB_FLR_14020">
+            <iso19112:geographicIdentifier>124847002</iso19112:geographicIdentifier>
+            <iso19112:gazetteer xlink:href="#BB_SIGAZ_12"/>
+            <iso19112:locationType xlink:href="#BB_SILC_11"/>
+            <dog:flur>002</dog:flur>
+        </dog:Flur>
+    </gml:featureMember>
+    <gml:featureMember>
+        <dog:Flur gml:id="'BB_FLR_14021">
+            <iso19112:geographicIdentifier>124847003</iso19112:geographicIdentifier>
+            <iso19112:gazetteer xlink:href="#BB_SIGAZ_12"/>
+            <iso19112:locationType xlink:href="#BB_SILC_11"/>
+            <dog:flur>003</dog:flur>
+        </dog:Flur>
+    </gml:featureMember>
+    <gml:featureMember>
+        <dog:Flur gml:id="'BB_FLR_14022">
+            <iso19112:geographicIdentifier>124847004</iso19112:geographicIdentifier>
+            <iso19112:gazetteer xlink:href="#BB_SIGAZ_12"/>
+            <iso19112:locationType xlink:href="#BB_SILC_11"/>
+            <dog:flur>004</dog:flur>
+        </dog:Flur>
+    </gml:featureMember>
+    <gml:featureMember>
+        <dog:Flur gml:id="'BB_FLR_14023">
+            <iso19112:geographicIdentifier>124847005</iso19112:geographicIdentifier>
+            <iso19112:gazetteer xlink:href="#BB_SIGAZ_12"/>
+            <iso19112:locationType xlink:href="#BB_SILC_11"/>
+            <dog:flur>005</dog:flur>
+        </dog:Flur>
+    </gml:featureMember>
+    <gml:featureMember>
+        <dog:Flur gml:id="'BB_FLR_14024">
+            <iso19112:geographicIdentifier>124847006</iso19112:geographicIdentifier>
+            <iso19112:gazetteer xlink:href="#BB_SIGAZ_12"/>
+            <iso19112:locationType xlink:href="#BB_SILC_11"/>
+            <dog:flur>006</dog:flur>
+        </dog:Flur>
+    </gml:featureMember>
+    <gml:featureMember>
+        <dog:Flur gml:id="'BB_FLR_14025">
+            <iso19112:geographicIdentifier>124847007</iso19112:geographicIdentifier>
+            <iso19112:gazetteer xlink:href="#BB_SIGAZ_12"/>
+            <iso19112:locationType xlink:href="#BB_SILC_11"/>
+            <dog:flur>007</dog:flur>
+        </dog:Flur>
+    </gml:featureMember>
+    <gml:featureMember>
+        <dog:Flur gml:id="'BB_FLR_14026">
+            <iso19112:geographicIdentifier>124847008</iso19112:geographicIdentifier>
+            <iso19112:gazetteer xlink:href="#BB_SIGAZ_12"/>
+            <iso19112:locationType xlink:href="#BB_SILC_11"/>
+            <dog:flur>008</dog:flur>
+        </dog:Flur>
+    </gml:featureMember>
+    <gml:featureMember>
+        <dog:Flur gml:id="'BB_FLR_14027">
+            <iso19112:geographicIdentifier>124847009</iso19112:geographicIdentifier>
+            <iso19112:gazetteer xlink:href="#BB_SIGAZ_12"/>
+            <iso19112:locationType xlink:href="#BB_SILC_11"/>
+            <dog:flur>009</dog:flur>
+        </dog:Flur>
+    </gml:featureMember>
+    <gml:featureMember>
+        <dog:Flur gml:id="'BB_FLR_14028">
+            <iso19112:geographicIdentifier>124847010</iso19112:geographicIdentifier>
+            <iso19112:gazetteer xlink:href="#BB_SIGAZ_12"/>
+            <iso19112:locationType xlink:href="#BB_SILC_11"/>
+            <dog:flur>010</dog:flur>
+        </dog:Flur>
+    </gml:featureMember>
+    <gml:featureMember>
+        <dog:Flur gml:id="'BB_FLR_14029">
+            <iso19112:geographicIdentifier>124847011</iso19112:geographicIdentifier>
+            <iso19112:gazetteer xlink:href="#BB_SIGAZ_12"/>
+            <iso19112:locationType xlink:href="#BB_SILC_11"/>
+            <dog:flur>011</dog:flur>
+        </dog:Flur>
+    </gml:featureMember>
+    <gml:featureMember>
+        <dog:Flur gml:id="'BB_FLR_14030">
+            <iso19112:geographicIdentifier>124847012</iso19112:geographicIdentifier>
+            <iso19112:gazetteer xlink:href="#BB_SIGAZ_12"/>
+            <iso19112:locationType xlink:href="#BB_SILC_11"/>
+            <dog:flur>012</dog:flur>
+        </dog:Flur>
+    </gml:featureMember>
+    <gml:featureMember>
+        <dog:Flur gml:id="'BB_FLR_14031">
+            <iso19112:geographicIdentifier>124847013</iso19112:geographicIdentifier>
+            <iso19112:gazetteer xlink:href="#BB_SIGAZ_12"/>
+            <iso19112:locationType xlink:href="#BB_SILC_11"/>
+            <dog:flur>013</dog:flur>
+        </dog:Flur>
+    </gml:featureMember>
+    <gml:featureMember>
+        <dog:Flur gml:id="'BB_FLR_14032">
+            <iso19112:geographicIdentifier>124847014</iso19112:geographicIdentifier>
+            <iso19112:gazetteer xlink:href="#BB_SIGAZ_12"/>
+            <iso19112:locationType xlink:href="#BB_SILC_11"/>
+            <dog:flur>014</dog:flur>
+        </dog:Flur>
+    </gml:featureMember>
+    <gml:featureMember>
+        <dog:Flur gml:id="'BB_FLR_14033">
+            <iso19112:geographicIdentifier>124847015</iso19112:geographicIdentifier>
+            <iso19112:gazetteer xlink:href="#BB_SIGAZ_12"/>
+            <iso19112:locationType xlink:href="#BB_SILC_11"/>
+            <dog:flur>015</dog:flur>
+        </dog:Flur>
+    </gml:featureMember>
+</wfs:FeatureCollection>
