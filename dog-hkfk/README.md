@@ -15,4 +15,4 @@ Some parts of the original schema needed to be changed.
 
 * schema locations were changed as workaround for https://java.net/jira/browse/JAXB-1044
 * `StrassenType#parent` type was changed to match definition of `iso19112:SI_LocationInstanceType#parent`
-* all `name` element were changed from type `xsd:string` to `gml:CodeType` to match the definition of ``
+* all `name` element were changed from type `xsd:string` to `gml:CodeType` to match the definition of `gml:name`
